@@ -1,0 +1,159 @@
+// * links
+@import url("./links.css");
+// * links end
+
+// * font familise
+// * 1.Grenze
+// * 2.Source Code Pro
+// * 3.Sarabun
+// * 4.Source Sans Pro
+$grenze: "Grenze", serif;
+$sarabun: "Sarabun", sans-serif;
+$sourceCodePro: "Source Code Pro", monospace;
+$sourceSansPro: "Source Sans Pro", sans-serif;
+// font familise end
+
+// * colors
+
+$main-color: #00a3ff;
+$wh-color: #fff;
+$bc-color: #000;
+$t-color: rgba(0, 216, 203, 0.25);
+
+// * colors end
+
+// * selection start
+
+::selection {
+  text-shadow: 2px 2px 2px $t-color;
+  background-color: $main-color;
+  color: $wh-color;
+}
+// * selection end
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+// * navbar start
+.navbar {
+  // * border: 2px solid black;
+  height: 94px;
+  //  * box-shadow: 0px 7px 5px 1px $t-color;
+  // * navbrand start
+  .navbar-brand {
+    text-transform: capitalize;
+    font-size: 39px !important;
+    font-family: $grenze;
+    color: $bc-color !important;
+    transition: all 200ms linear;
+  }
+  .navbar-brand:hover {
+    color: $main-color !important;
+  }
+  // * navbrand end
+
+  // * navlivk start
+  .nav-link {
+    font-size: 20px !important;
+    position: relative;
+    color: $bc-color !important;
+    margin: 0rem 1rem;
+    transition: all 200ms linear;
+    font-family: $sourceCodePro;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background-color: $main-color !important;
+      width: 0%;
+      margin: auto;
+      transition: all 200ms linear;
+    }
+    &:hover::after {
+      width: 80% !important;
+    }
+    &:hover {
+      color: $main-color !important;
+    }
+  }
+  // * ancor start
+  a {
+    font-size: 20px !important;
+    position: relative;
+    color: $bc-color !important;
+    margin: 0rem 1rem;
+    transition: all 200ms linear;
+    font-family: $sourceCodePro;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 0%;
+      right: 0%;
+      height: 2px;
+      background-color: $main-color !important;
+      width: 0%;
+      margin: auto;
+      transition: all 200ms linear;
+    }
+    &:hover::after {
+      width: 100% !important;
+    }
+    &:hover {
+      color: $main-color !important;
+    }
+  }
+  // * ancor end
+  // *navlivk end
+
+  // * active navlink start
+  .active {
+    color: $main-color !important;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background-color: $main-color !important;
+      width: 80%;
+      margin: auto;
+    }
+  }
+  // * active navlink end
+}
+
+// * navbar end
+
+// * content start
+.navigation {
+  font-family: $sarabun;
+  font-size: 69px;
+}
+.paragraph {
+  font-family: $sourceSansPro;
+  font-size: 23px;
+  a {
+    color: $main-color !important;
+    text-decoration: none !important;
+    font-family: $sourceSansPro;
+  }
+}
+.font-size-l {
+  font-size: 22px;
+  font-size: $sourceSansPro;
+}
+.font-size-xl {
+  font-size: 90px;
+  font-size: $sarabun;
+}
+// * content end

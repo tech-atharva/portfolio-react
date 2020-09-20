@@ -1,0 +1,19 @@
+@media screen and (max-width: 992px) {
+  .nav-item {
+    text-align: center !important;
+  }
+  .navbar {
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-md-6 img {
+    height: 80% !important;
+    width: 80% !important;
+  }
+  .font-size-xl {
+    font-size: 38px !important;
+  }
+}
+/*# sourceMappingURL=reponsive.css.map */
